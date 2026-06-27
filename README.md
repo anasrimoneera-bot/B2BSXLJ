@@ -66,14 +66,17 @@ sudo cp deploy/nginx-b2bsxlj.conf /etc/nginx/conf.d/b2bsxlj.conf   # CentOS/Anol
 sudo nginx -t && sudo systemctl restart nginx
 ```
 
-### 绑定域名 + 免费 HTTPS
+### 绑定域名 b2bsxlj.com + 免费 HTTPS
 
-1. 在域名服务商把域名 A 记录解析到 `101.126.155.252`（**国内服务器需先完成 ICP 备案**）。
-2. 修改 `deploy/nginx-b2bsxlj.conf` 里的 `server_name` 为你的域名并重载。
-3. 申请免费证书：
+站点配置 `deploy/nginx-b2bsxlj.conf` 的 `server_name` 已设为
+`b2bsxlj.com www.b2bsxlj.com 101.126.155.252`（域名与 IP 均可访问）。
+
+1. **ICP 备案**：国内服务器，`b2bsxlj.com` 需先完成备案才能正常提供网页服务。
+2. **DNS 解析**：把 `b2bsxlj.com` 与 `www` 的 A 记录解析到 `101.126.155.252`。
+3. **申请免费证书**（certbot 会自动改好 443 与 HTTP→HTTPS 跳转）：
    ```bash
    sudo apt install -y certbot python3-certbot-nginx
-   sudo certbot --nginx -d www.你的域名
+   sudo certbot --nginx -d b2bsxlj.com -d www.b2bsxlj.com
    ```
 
 ## 备选方案：对象存储 TOS 静态托管（免运维）
