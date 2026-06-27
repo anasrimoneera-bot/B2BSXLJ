@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>入驻申请 | b2bsxlj 海外仓本土发货分销平台</title>
+<meta name="description" content="提交 b2bsxlj 分销入驻申请，专属招商经理将尽快与你联系。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- ============================= 导航 ============================= -->
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="index.html">
+      <span class="mk"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
+      b2b<b>sxlj</b>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#advantages">平台优势</a>
+      <a href="index.html#products">产品品类</a>
+      <a href="index.html#warehouses">仓网布局</a>
+      <a href="index.html#how">合作流程</a>
+      <a href="about.html">关于我们</a>
+      <a href="join.html">入驻申请</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="join.html">免费入驻</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============================= 子页 Banner ============================= -->
+<section class="subhero">
+  <div class="wrap">
+    <div class="kicker" style="color:#9FC0FF">入驻申请</div>
+    <h1>免费入驻 · 开启你的海外本土供应链</h1>
+    <p>填写以下信息提交申请，审核通过后即可开通分销账号、获取供货价与产品库权限。无需囤货、无需自建海外仓，专属招商经理一对一对接。</p>
+  </div>
+</section>
+
+<!-- ============================= 表单 ============================= -->
+<section class="sec">
+  <div class="wrap">
+    <div class="form-wrap">
+      <div class="form-ok" id="okmsg">✅ 已为你生成申请邮件，请在弹出的邮件客户端中点击发送即可。若未弹出，请直接将信息发送至招商邮箱。</div>
+
+      <!-- 表单：默认通过邮件提交（无需后端）。如需自动入库，可把 onsubmit 改为对接你的后端/云函数接口。 -->
+      <form id="applyForm" onsubmit="return submitApply(event)">
+        <div class="form-row">
+          <div class="field"><label>公司 / 品牌名称 <span class="req">*</span></label><input name="company" required placeholder="如：APXES / 某某贸易有限公司"></div>
+          <div class="field"><label>联系人 <span class="req">*</span></label><input name="name" required placeholder="您的称呼"></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label>微信号 <span class="req">*</span></label><input name="wechat" required placeholder="方便招商经理添加沟通"></div>
+          <div class="field"><label>手机号 / 电话</label><input name="phone" placeholder="选填"></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label>邮箱</label><input name="email" type="email" placeholder="选填"></div>
+          <div class="field"><label>主营销售平台 <span class="req">*</span></label>
+            <select name="platform" required>
+              <option value="">请选择</option>
+              <option>亚马逊 Amazon</option>
+              <option>eBay</option>
+              <option>Walmart</option>
+              <option>Shopify / 独立站</option>
+              <option>TikTok Shop</option>
+              <option>其他 / 多平台</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label>目标市场 <span class="req">*</span></label>
+            <select name="market" required>
+              <option value="">请选择</option>
+              <option>美国</option>
+              <option>欧盟</option>
+              <option>美国 + 欧盟</option>
+            </select>
+          </div>
+          <div class="field"><label>当前月均订单量</label>
+            <select name="volume">
+              <option value="">请选择（选填）</option>
+              <option>新手起步 / 暂无</option>
+              <option>1–100 单</option>
+              <option>100–500 单</option>
+              <option>500 单以上</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label>留言 / 需求说明</label><textarea name="message" placeholder="例如：主营家具类目，希望了解供货价与对接方式"></textarea></div>
+        <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center;font-size:16px">提交入驻申请</button>
+        <p class="form-note">提交即表示同意我们就合作事宜与您联系。我们重视您的隐私，仅将信息用于业务沟通。</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= 页脚 ============================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo"><span class="mk"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>b2b<b style="color:var(--azure2)">sxlj</b></div>
+        <p>美国 · 欧盟海外仓本土发货分销平台。海量本土现货、一件代发、零库存零压货，助力跨境卖家轻松出海。</p>
+      </div>
+      <div class="foot-col"><h4>平台</h4><a href="index.html#advantages">平台优势</a><a href="index.html#products">产品品类</a><a href="index.html#warehouses">仓网布局</a><a href="index.html#how">合作流程</a></div>
+      <div class="foot-col"><h4>支持</h4><a href="index.html#faq">常见问题</a><a href="about.html">关于我们</a><a href="join.html">入驻申请</a></div>
+      <div class="foot-col"><h4>联系我们</h4><a href="#">微信：【请填写】</a><a href="#">邮箱：【请填写】</a><a href="#">电话：【请填写】</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 b2bsxlj. 保留所有权利。</span><span>美国 · 欧盟海外仓本土发货分销平台</span></div>
+  </div>
+</footer>
+
+<script src="assets/edit.js"></script>
+<script>
+  // 招商接收邮箱：请把下面的邮箱改成你的真实邮箱
+  var APPLY_EMAIL = "your-email@example.com";
+  function submitApply(e){
+    e.preventDefault();
+    var f=e.target, d=new FormData(f), L=[];
+    d.forEach(function(v,k){ if(v) L.push(k+'：'+v); });
+    var labels={company:'公司/品牌',name:'联系人',wechat:'微信',phone:'电话',email:'邮箱',platform:'主营平台',market:'目标市场',volume:'月均订单',message:'留言'};
+    var lines=[]; d.forEach(function(v,k){ if(v) lines.push((labels[k]||k)+'：'+v); });
+    var body=encodeURIComponent('【b2bsxlj 入驻申请】\n\n'+lines.join('\n'));
+    var subject=encodeURIComponent('入驻申请 - '+(d.get('company')||'新申请'));
+    window.location.href='mailto:'+APPLY_EMAIL+'?subject='+subject+'&body='+body;
+    document.getElementById('okmsg').style.display='block';
+    document.getElementById('okmsg').scrollIntoView({behavior:'smooth',block:'center'});
+    return false;
+  }
+</script>
+</body>
+</html>
