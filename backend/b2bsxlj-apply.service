@@ -15,9 +15,9 @@ Environment=APPLY_ADMIN_TOKEN=change-me-please
 # QQ 邮箱：SMTP_HOST=smtp.qq.com、PORT=465、USER=你的QQ邮箱、PASS=QQ邮箱授权码
 #Environment=APPLY_SMTP_HOST=smtp.qq.com
 #Environment=APPLY_SMTP_PORT=465
-#Environment=APPLY_SMTP_USER=594931721@qq.com
+#Environment=APPLY_SMTP_USER=b2bsxlj@qq.com
 #Environment=APPLY_SMTP_PASS=你的QQ邮箱授权码
-#Environment=APPLY_MAIL_TO=594931721@qq.com
+#Environment=APPLY_MAIL_TO=b2bsxlj@qq.com
 
 ExecStart=/usr/bin/python3 /root/b2bsxlj/backend/apply_server.py
 Restart=always
