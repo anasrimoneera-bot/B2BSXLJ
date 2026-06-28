@@ -1,0 +1,27 @@
+[Unit]
+Description=b2bsxlj apply form receiver
+After=network.target
+
+[Service]
+Type=simple
+# === 基本配置 ===
+Environment=APPLY_HOST=127.0.0.1
+Environment=APPLY_PORT=5010
+Environment=APPLY_DATA_DIR=/var/www/b2bsxlj-data
+# 查看申请列表的口令，务必改成你自己的复杂口令！
+Environment=APPLY_ADMIN_TOKEN=change-me-please
+
+# === 邮件通知（可选，不需要就保持注释/留空） ===
+# QQ 邮箱：SMTP_HOST=smtp.qq.com、PORT=465、USER=你的QQ邮箱、PASS=QQ邮箱授权码
+#Environment=APPLY_SMTP_HOST=smtp.qq.com
+#Environment=APPLY_SMTP_PORT=465
+#Environment=APPLY_SMTP_USER=594931721@qq.com
+#Environment=APPLY_SMTP_PASS=你的QQ邮箱授权码
+#Environment=APPLY_MAIL_TO=594931721@qq.com
+
+ExecStart=/usr/bin/python3 /root/b2bsxlj/backend/apply_server.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
